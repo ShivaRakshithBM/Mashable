@@ -33,6 +33,9 @@ Data Preperation:
 2) Log transformation
 plotting the distribution of target variable -- number of shares, I noticed that it was right-skewed, so I did log transformation to reduce the skewnes
 
+3) Principle Component Analysis
+reduced the dimensions of the input dataset from 58 to 31, by  keeping 98% of the variance in the dataset
+
 Mdelling:
 1) 
 
