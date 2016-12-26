@@ -1,5 +1,5 @@
 Problem statement:
-Identification of the news articles which will be popular among the public for Mashable company
+Identification of the news articles which will be popular among the readers for Mashable company
 
 Questions:
 1) What are the factors to include for determining the popularity of the news articles?
@@ -7,6 +7,7 @@ Questions:
 
 Approach:
 Followed the 6 stage framework of CRISP Data Mining process
+CRISP - Cross-Industry Standard Process
 
 Business understanding:
 
@@ -18,13 +19,6 @@ Data understanding
 
 1) The dataset consists of 39,797 instances, each corresponding to a different article, and 61 attributes (58 predictive attributes, 2 non-predictive attributes, 1 target attribute)
 2) The data includes both numeric as well as binary attributes, of which 58 predictive attributes can be classified to 8 aspects: words counts, content diversity, data channel, weekday at publish and sentiment
-3)  
-
-1) Obtained the dataset from  UCI machine learning repository published by Mashable during the years 2013 - 2015
-2) Had 63 variables like # of images, # of videos, # of words in the article, category of the article, , sentiment polarity, Title Polarity etc.
- words counts, content diversity, data channel, keyword shares, referenced articles 
-shares, weekday at publish, topics and sentiment
-3) The target varia
 
 Data Preperation:
 
@@ -36,13 +30,15 @@ plotting the distribution of target variable -- number of shares, I noticed that
 3) Principle Component Analysis
 reduced the dimensions of the input dataset from 58 to 31, by  keeping 98% of the variance in the dataset
 
-Mdelling:
-1) 
+Modelling:
+1) Have implemented SVM with non linear kernel, Decision trees, Random forests with Adaboost
+2) The reason to select only non linear models is we hand pickex the imporatnt variables from the lot which might be affecting the target variable. Post which we checked the relationship between each of the hand picked variable and the target variable and found it was mostly non linear
+3) Also, we saw that combination of variables together would afffect the target variable (interaction terms)
 
 Evaluation:
 1) I have used Cross validation of 10 folds. The model has been implemented to hold out data sets. 
-2) Have used the metric Root Mean Square Error to evaluate the difference of Actual and predicted number of shares
-3) Baseline -
+2) Have used the metric Root Mean Square Error (RMSE) to evaluate the difference of Actual and predicted number of shares
+3) Baseline - We took the mean number of shares for the articles at the categoruy of the article and then leveraged RMSE for comparison
 
 Deployment:
 1) The analysis ccan be used by deploying thhe same in Mashable. Multiple users can access if its on a cloud sharing platform like AWS or R server
