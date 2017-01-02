@@ -47,3 +47,4 @@ Deployment:
 Learnings:
 1) Log transformation of the target variable to better fit the model
 2) Comparison of the model with the baseline model for evaluation
+3) Intricate features of articles / content
