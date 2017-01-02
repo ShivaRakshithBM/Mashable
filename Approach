@@ -43,3 +43,7 @@ Evaluation:
 Deployment:
 1) The analysis ccan be used by deploying thhe same in Mashable. Multiple users can access if its on a cloud sharing platform like AWS or R server
 2) It can also be automated so that on a daily basis when the data changes, the predictions can be produced and used. We can connect the model to the platform from where the data is stored
+
+Learnings:
+1) Log transformation of the target variable to better fit the model
+2) Comparison of the model with the baseline model for evaluation
