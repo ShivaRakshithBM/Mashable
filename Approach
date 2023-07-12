@@ -32,11 +32,12 @@ reduced the dimensions of the input dataset from 58 to 31, by  keeping 98% of th
 
 Modelling:
 1) Have implemented SVM with non linear kernel, Decision trees, Random forests with Adaboost
-2) The reason to select only non linear models is we hand pickex the imporatnt variables from the lot which might be affecting the target variable. Post which we checked the relationship between each of the hand picked variable and the target variable and found it was mostly non linear
-3) Also, we saw that combination of variables together would afffect the target variable (interaction terms)
+2) The reason to select only non linear models is we hand pickex the imporatnt variables from the lot which might be affecting the target variable. 
+3) Post which we checked the relationship between each of the hand picked variable and the target variable and found it was mostly non linear
+4) Also, we saw that combination of variables together would afffect the target variable (interaction terms)
 
 Evaluation:
-1) I have used Cross validation of 10 folds. The model has been implemented to hold out data sets. 
+1) I have used Cross validation of 10 folds. The model has been implemented to hold out data sets for generalization 
 2) Have used the metric Root Mean Square Error (RMSE) to evaluate the difference of Actual and predicted number of shares
 3) Baseline - We took the mean number of shares for the articles at the categoruy of the article and then leveraged RMSE for comparison
 
